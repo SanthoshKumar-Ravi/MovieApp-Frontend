@@ -1,0 +1,35 @@
+
+<!-- <search ="a"></search>
+<div *ngIf="a" class="card">
+ -->
+ 
+<md-grid-list cols="3" rowHeight="1:0.9" >
+<div *ngFor="let movie of a">
+<md-grid-tile class="grid">
+ <md-card class="card1">
+  <md-card-header>
+    
+    <md-card-title><strong>Title:</strong> {{movie.title}}</md-card-title>
+    <md-card-subtitle><strong>Year:</strong>{{movie.release_date}}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image class="poster-image" [src]="'http://image.tmdb.org/t/p/w92' + movie.poster_path">
+    <md-card-actions class="cardAction">
+    <button md-button class="button" (click)="savemovie(movie.id,movie.title,movie.poster_path,movie.release_date,description.value)">Add to Fav</button>
+     <!-- <button md-button class="button">Like</button> -->
+  </md-card-actions>
+
+
+<md-input-container class="example-full-width">
+    <input mdInput #description placeholder="enter your description" value="nice">
+  </md-input-container>
+      <br/>
+<span class="glyphicon glyphicon-star" ></span>{{movie.popularity}}
+</md-card>
+
+</md-grid-tile>
+</div>
+</md-grid-list>
+
+<div *ngIf="movie_array">
+<p>{{movie_array.imdbID}}</p>
+</div>
