@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieSearchService } from '../movie-search.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -8,30 +9,14 @@ import { MovieSearchService } from '../movie-search.service';
 })
 export class NavigationBarComponent implements OnInit {
 
-  constructor(private moviesearchservice: MovieSearchService) { }
+  constructor(private moviesearchservice: MovieSearchService , private router: Router) { }
 b=[];
-delete_res=[];
-update_res=[];
   ngOnInit() {
     
   }
   favmovies(){
-  	console.log("inside favmovie");
-  	this.moviesearchservice.favMovies().subscribe(b => this.b =b);
-  	console.log("back too movie");
-  }
+  	 this.router.navigate(['favourite']);
+    }
 
-  deleteMovie(id){
-    console.log("this is movie delele controller");
-    this.moviesearchservice.deleteMovie(id)
-    .subscribe(delete_res => this.delete_res= delete_res);
-    this.moviesearchservice.favMovies().subscribe(b => this.b =b);
-  }
-  updateMovie(m,desc){
-    console.log(desc);
-    let mo ={ 'imdbID':m.imdbID ,'Title' : m.Title , 'Year' : m.Year , 'Poster' : m.Poster , 'Description' :desc};
-    this.moviesearchservice.updateMovie(mo)
-    .subscribe(update_res => this.update_res = update_res);
-  }
-
+ 
 }

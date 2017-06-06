@@ -30,5 +30,4 @@ import { AppRoutingModule } from '../app-routing.module';
   providers: [ MovieSearchService ],
   // bootstrap: [AppComponent]
 })
-
 export class SearchModule { }

@@ -1,11 +1,4 @@
-<md-toolbar color="warn"> 
-<button md-button class="buttons">Home</button>
-<button md-button class="buttons">Login</button>
-<button md-button class="buttons" (click)="favmovies()">Favourite Movies</button>
-<app-search></app-search>
-</md-toolbar>
-
-<!-- <div *ngIf="b">
+<div *ngIf="b">
 <md-grid-list cols="3" rowHeight="1:0.9" >
 <div *ngFor="let movie of b">
 <md-grid-tile class="grid">
@@ -27,19 +20,6 @@
   </md-input-container>
       <br/>
 <!-- <span class="glyphicon glyphicon-star" ></span>{{movie.popularity}} -->
-<!-- </md-card>
+</md-card>
 </md-grid-tile>
 </div>
-
-</md-grid-list>
-<div *ngIf="delete_res">
-<p>{{delete_res.message}}</p>
- --><!-- <div *ngFor="let movie_del of delete_res"> -->
-<!-- <md-card class="card1"> -->
-  <!-- <md-card-header> -->
-    <!-- <md-card-title><strong>Title:</strong> {{movie_del.message}}</md-card-title> -->
- <!-- </md-card-header> -->
-<!-- </md-card> -->
- <!-- </div> -->
- <!-- </div> -->
- 

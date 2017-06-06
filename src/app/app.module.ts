@@ -13,10 +13,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { SearchModule } from './search/search.module';
 import { NavigationBarModule } from './navigation-bar/navigation-module';
 import { AppRoutingModule } from './app-routing.module';
+import { FavouriteMoviesComponent } from './favourite-movies/favourite-movies.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FavouriteMoviesComponent
   ],
     exports: [ RouterModule ],
   imports: [
@@ -28,7 +30,8 @@ import { AppRoutingModule } from './app-routing.module';
     SearchModule,
     NavigationBarModule,
     AppRoutingModule
-    ],
+    //FavouriteMoviesModule
+],
   providers: [ MovieSearchService ],
   bootstrap: [AppComponent]
 })

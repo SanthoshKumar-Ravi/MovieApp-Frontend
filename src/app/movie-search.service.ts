@@ -28,6 +28,44 @@ getMovies(path: string) {
     .map((res) => res.json().results  || [] );
       }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       favMovies(){
         console.log("inside fav movie service");
         return this.http.get("http://localhost:8080/movie").map((res) => res.json() || []);
@@ -54,4 +92,4 @@ return this.http.post(url, encoded_data , options).map((res)=> res.json() || [])
     let options = new RequestOptions({ headers: headers });
 return this.http.put(url, encoded_data , options).map((res)=> res.json() || []);;
       }
-}
+ }
